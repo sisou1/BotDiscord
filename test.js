@@ -11,9 +11,7 @@ function Calculatrice(x,y,callback){
     return callback(x,y);
 }
 
-
-
-app.get('/addition', function (req, res) {
+app.get('/addition', function (req, res) { // http://localhost:3000/addition?x=10&y=5
 
     const x = parseInt(req.query.x)
     const y = parseInt(req.query.y)
