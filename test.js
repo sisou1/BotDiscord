@@ -38,7 +38,7 @@ app.get('/multiplication', function (req, res) {
     if (!x || !y){
         res.sendStatus(400)
     }
-    res.send(Calculatrice(x,y,Addition).toString());
+    res.send(Calculatrice(x,y,multiplication()).toString());
 
 })
 app.get('/division', function (req, res) {
@@ -48,7 +48,7 @@ app.get('/division', function (req, res) {
     if (!x || !y){
         res.sendStatus(400)
     }
-    res.send(Calculatrice(x,y,Addition).toString());
+    res.send(Calculatrice(x,y,division()).toString());
 
 })
 
