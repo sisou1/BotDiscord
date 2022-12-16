@@ -11,7 +11,7 @@ function Calculatrice(x,y,callback){
     return callback(x,y);
 }
 
-app.get('/addition', function (req, res) { // http://localhost:3000/addition?x=10&y=5
+    app.get('/addition', function (req, res) { // http://localhost:3000/addition?x=10&y=5
 
     const x = parseInt(req.query.x)
     const y = parseInt(req.query.y)
@@ -38,7 +38,7 @@ app.get('/multiplication', function (req, res) {
     if (!x || !y){
         res.sendStatus(400)
     }
-    res.send(Calculatrice(x,y,multiplication()).toString());
+    res.send(Calculatrice(x,y,multiplication).toString());
 
 })
 app.get('/division', function (req, res) {
@@ -48,7 +48,7 @@ app.get('/division', function (req, res) {
     if (!x || !y){
         res.sendStatus(400)
     }
-    res.send(Calculatrice(x,y,division()).toString());
+    res.send(Calculatrice(x,y,division).toString());
 
 })
 
